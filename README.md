@@ -11,9 +11,9 @@ To start the game, follow these steps:
 1. Clone the repository to your local machine.
 2. Ensure you have Python and Pygame installed.
 
-```bash
-pip install pygame
-```
+   ```bash
+   pip install pygame
+   ```
 
 3. Open a terminal and navigate to the project directory.
 4. Run the following command to start the game:
