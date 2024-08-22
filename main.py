@@ -55,7 +55,11 @@ def end_game(win, elapsed_time, targets_pressed, clicks):
     speed = round(targets_pressed / elapsed_time, 1)
     speed_label = LABEL_FONT.render(f'Speed: {speed} t/s', 1, 'white')
     hits_label = LABEL_FONT.render(f'Hits: {targets_pressed}', 1, 'white')
-    accuracy = round(targets_pressed / clicks * 100, 1)
+
+    if clicks == 0:
+        accuracy = 0
+    else:
+        accuracy = round(targets_pressed / clicks * 100, 1)
     accuracy_label = LABEL_FONT.render(f'Accuracy: {accuracy}%', 1, 'white')
 
     win.blit(time_label, (get_middle_position(time_label), 100))
